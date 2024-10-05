@@ -1,0 +1,20 @@
+.navbar {
+  background: transparent;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.drawer-list {
+  width: 250px;
+}
+
+.drawer-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.drawer-list a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

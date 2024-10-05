@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './pages/home.jsx';
 import About from './pages/about.jsx';
-
 import Contact from './pages/contact.jsx';
 import Resturant from './pages/resturant.jsx';
-import { Menu } from '@mui/material';
+import Menu from './pages/Menu.jsx';
+
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
     <Navbar />
       <Routes>
         <Route path="/" element={<Home />} /> {/* No need for "exact" in v6 */}
+        <Route path="/menu" element={<Menu />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resturant" element={<Resturant />} />
