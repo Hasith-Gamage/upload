@@ -1,20 +1,21 @@
-// contact.jsx
 import React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import './About.css';
 
-export default function About (){
+//about home image
+export default function About() {
   return (
-    <div>
-           <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack>
-    </div>
-  ) 
-};
-
-
-
+    <>
+      <div className="contact-container2">
+        <div className="overlay"></div>
+        <div className="content">
+          <h1>About us</h1>
+          <p>
+            Welcome to our contact page! Feel free to reach out to us with any questions, comments, or inquiries.
+            Our team is here to help you and provide the best customer service possible.
+          </p>
+        </div>
+      </div>
+     
+    </>
+  );
+}

@@ -2,21 +2,21 @@ import React from 'react';
 import { Container, Grid, Typography, Paper, Box } from '@mui/material';
 
 // Import your images (assuming they are stored locally)
-import img1 from '../assets/image1.jpg';
-import img2 from '../assets/image1.jpg';
-import img3 from '../assets/image1.jpg';
-
+import img1 from '../assets/image12.jpg';
+import img2 from '../assets/image13.jpg';
+import img3 from '../assets/image14.jpg';
+import img4 from '../assets/image14.jpg';
 
 
 // Store images in an array
-const images = [img1, img2, img3];
+const images = [img1, img2, img3,img4];
 
 
 export default function Menu() {
   return (
     <div>
-      <Container sx={{ marginTop: 4 }}>
-            <Grid container spacing={3}>
+      <Container sx={{ marginTop: 5 }}>
+            <Grid container spacing={5}>
               {images.map((image, index) => (
                 <Grid item xs={12} sm={6} md={4} key={index}>
                   <img

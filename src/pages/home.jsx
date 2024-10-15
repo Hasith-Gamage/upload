@@ -5,15 +5,17 @@ import { Container, Grid, Typography, Paper, Box } from '@mui/material';
 import { LocalPizza, TwoWheeler, Cake } from '@mui/icons-material';
 
 // Import your images (assuming they are stored locally)
-import img1 from '../assets/image1.jpg';
-import img2 from '../assets/image1.jpg';
-import img3 from '../assets/image1.jpg';
-import img4 from '../assets/image1.jpg';
-import img5 from '../assets/image1.jpg';
-import img6 from '../assets/image1.jpg';
-
+import img1 from '../assets/image4.jpg';
+import img2 from '../assets/image11.jpg';
+import img3 from '../assets/image3.jpg';
+import img4 from '../assets/image6.jpg';
+import img5 from '../assets/image8.jpg';
+import img6 from '../assets/image7.jpg';
+import img7 from '../assets/image9.jpg';
+import img8 from '../assets/image5.jpg';
+import img9 from '../assets/image10.jpg';
 // Store images in an array
-const images = [img1, img2, img3, img4, img5, img6];
+const images = [img1, img2, img3, img4, img5, img6,img7,img8,img9,];
 
 const services = [
   {
@@ -81,7 +83,7 @@ export default function Home() {
             ))}
           </Grid>
           <h1 style={{ textAlign: 'center', color: '#ffb703' }}>Suit To Your Craving</h1>
-          <h1 style={{ color: '#ffb703' }}>Bit Of Memories</h1>
+          <h1 style={{ textAlign: 'center', color: '#ffb703' }}>Bit Of Memories</h1>
           <Container sx={{ marginTop: 4 }}>
             <Grid container spacing={3}>
               {images.map((image, index) => (
