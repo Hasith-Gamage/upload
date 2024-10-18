@@ -62,7 +62,7 @@ export default function Contact() {
           />
           <Marker position={[6.713024, 79.970703]}>
             <Popup>
-              ChefD is located here! <br /> NO92, Dikhena Dodangoda.
+              ChefD is located here! <br /> No92, Dikhena Dodangoda.
             </Popup>
           </Marker>
         </MapContainer>
@@ -76,7 +76,11 @@ export default function Contact() {
         </div>
         <div>
           <h2>Our Location</h2>
-          <p>NO92, Dikhena Dodangoda.</p>
+          <p>No92, Dikhena Dodangoda.</p>
+          <p>Get Direction</p>
+
+          <h2>Our Location</h2>
+          <p>Rannagala chefD</p>
           <p>Get Direction</p>
         </div>
         <div>
@@ -90,6 +94,8 @@ export default function Contact() {
           <h2>Opening Hours</h2>
           <p>Monday to Sunday
             11.00AM - 10.30PM</p>
+            
+            {/* css part in contact num,location cart */}
           <Button
             variant="outlined"
             sx={{

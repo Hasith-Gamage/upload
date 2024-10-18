@@ -107,6 +107,32 @@ export default function Home() {
             </Grid>
           </Container>
         </Container>
+        
+      </div><div>
+      <h2>ChefD</h2>
+        </div>
+        <div>
+          <h2>Our Location</h2>
+          <p>No92, Dikhena Dodangoda.</p>
+          <p>Get Direction</p>
+
+          <h2>Our Location</h2>
+          <p>Rannagala chefD</p>
+          <p>Get Direction</p>
+        </div>
+        <div>
+          <h2>Quick Link</h2>
+          <p>Home</p>
+          <p>Menu</p>
+          <p>About Us</p>
+          <p>Contact Us</p>
+        </div>
+        <div>
+          <h2>Opening Hours</h2>
+          <p>Monday to Sunday
+            11.00AM - 10.30PM</p>
+
+
       </div>
     </>
 

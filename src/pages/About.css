@@ -1,13 +1,45 @@
-
-.contact-container2 {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url('/src/assets/image6.jpg');  /* If the image is in the public folder */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: fadeIn 2s ease-in-out;
+.video-container {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #14101077;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(5, 3, 3, 0.071);
 }
+
+.video-card {
+  padding: 20px;
+}
+
+.video-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #dba80dfb;
+  margin-bottom: 20px;
+}
+
+.video-player {
+  border-radius: 10px;
+}
+
+.image-title {
+  font-weight: bold;
+  color: #d39104;
+  margin-bottom: 40px;
+}
+
+/* Styles for the black frame */
+.image-frame {
+  border: 5px solid rgba(44, 42, 42, 0); /* Black border */
+  border-radius: 10px; /* Optional: to match the corners */
+  padding: 5px; /* Space between the border and image */
+}
+
+.gallery-image {
+  width: 110%; /* Ensure the image takes full width of the frame */
+  border-radius: 10px; /* Rounded corners for the image */
+  display: block; /* Ensures that there are no extra spaces below the image */
+}
+
 
 

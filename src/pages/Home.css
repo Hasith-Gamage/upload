@@ -38,6 +38,21 @@
     width: 60%;
     line-height: 1.6;
   }
+
+/* card location opening house time */
+.content h2 {
+  color: #ffb703;
+  border-color: #ffb703;
+  background-color: transparent;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.content h2:hover {
+  background-color: #ffb703;
+  color: black;
+  border-color: #ffb703;
+}
   
   /* Fade-in effect for the background image */
   @keyframes fadeIn {

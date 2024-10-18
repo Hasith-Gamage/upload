@@ -54,7 +54,7 @@ export default function Navbar() {
             sx={{
               flexGrow: 1,
               fontFamily: 'Brush Script MT, cursive',
-              fontSize: '28px',
+              fontSize: '50px',
               color: '#ffb703',
             }}
           >
