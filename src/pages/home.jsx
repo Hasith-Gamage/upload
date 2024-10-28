@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
-
-import { Container, Grid, Typography, Paper, Box } from '@mui/material';
+import { Container, Grid, Typography, Paper, Box,Button } from '@mui/material';
 import { LocalPizza, TwoWheeler, Cake } from '@mui/icons-material';
 
 // Import your images (assuming they are stored locally)
@@ -9,13 +8,19 @@ import img1 from '../assets/image4.jpg';
 import img2 from '../assets/image11.jpg';
 import img3 from '../assets/image3.jpg';
 import img4 from '../assets/image6.jpg';
-import img5 from '../assets/image8.jpg';
+import img5 from '../assets/image20.jpg';
 import img6 from '../assets/image7.jpg';
 import img7 from '../assets/image9.jpg';
 import img8 from '../assets/image5.jpg';
 import img9 from '../assets/image10.jpg';
-// Store images in an array
-const images = [img1, img2, img3, img4, img5, img6,img7,img8,img9,];
+
+// Alternate images
+import image1 from '../assets/image1.jpg';
+import image2 from '../assets/image37.jpg';
+import image3 from '../assets/image37.jpg';
+
+
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 const services = [
   {
@@ -50,9 +55,9 @@ const ServiceCard = ({ icon, title, description }) => (
           margin: 'auto',
         }}
       >
-        <Box sx={{ color: 'black', fontSize: 40, }}>{icon}</Box>
+        <Box sx={{ color: 'black', fontSize: 40 }}>{icon}</Box>
       </Box>
-      <Typography variant="h6" component="h3" sx={{ marginTop: 2, color: '#ffb703', fontWeight: 700, }}>
+      <Typography variant="h6" component="h3" sx={{ marginTop: 2, color: '#ffb703', fontWeight: 700 }}>
         {title}
       </Typography>
       <Typography variant="body1" sx={{ marginTop: 1, color: 'white' }}>
@@ -63,10 +68,20 @@ const ServiceCard = ({ icon, title, description }) => (
 );
 
 export default function Home() {
-  return (
+  const [currentImage, setCurrentImage] = useState(image1); // Default image
 
+  useEffect(() => {
+    // Set up a timer to alternate images every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage === image1 ? image2 : image1));
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
+
+  return (
     <>
-      <div className="contact-container">
+      <div className="contact-container" style={{ backgroundImage: `url(${currentImage})` }}>
         <div className="overlay"></div>
         <div className="content">
           <h1>Home</h1>
@@ -75,7 +90,8 @@ export default function Home() {
             Our team is here to help you and provide the best customer service possible.
           </p>
         </div>
-      </div><div>
+      </div>
+      <div>
         <Container sx={{ marginTop: 4 }}>
           <Grid container spacing={4}>
             {services.map((service, index) => (
@@ -107,10 +123,12 @@ export default function Home() {
             </Grid>
           </Container>
         </Container>
-        
-      </div><div>
-      <h2>ChefD</h2>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', color: 'white' }}>
+        <div>
+          <h2>ChefD</h2>
         </div>
+        
         <div>
           <h2>Our Location</h2>
           <p>No92, Dikhena Dodangoda.</p>
@@ -131,11 +149,47 @@ export default function Home() {
           <h2>Opening Hours</h2>
           <p>Monday to Sunday
             11.00AM - 10.30PM</p>
+            
+            {/* css part in contact num,location cart */}
+          <Button
+            variant="outlined"
+            sx={{
+              color: '#ffb703',
+              borderColor: '#ffb703',
+              backgroundColor: 'transparent',
+              padding: '10px 20px',
+              fontWeight: 'bold',
+              '&:hover': {
+                backgroundColor: '#ffb703',
+                color: 'black',
+                borderColor: '#ffb703',
+              },
+            }}
+          >
+            TABLE RESERVATIONS
+          </Button>
 
-
+          <Button
+ variant="outlined"
+ sx={{
+  color: '#ffb703',
+              borderColor: '#ffb703',
+              backgroundColor: 'transparent',
+              padding: '10px 20px',
+              fontWeight: 'bold',
+              '&:hover': {
+                backgroundColor: '#ffb703',
+                color: 'black',
+                borderColor: '#ffb703',
+              },
+            }}
+          >
+            TABLE RESERVATIONS
+          </Button>
+ 
+          
+        </div>
       </div>
     </>
-
-
-  )
-};
+  );
+}
