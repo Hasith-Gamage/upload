@@ -47,7 +47,17 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="static" className="navbar" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+      <AppBar position="fixed" className="navbar" sx={{
+       
+        backgroundColor: 'rgba(0, 0, 0, 0.8)', // Add opacity to the background
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)', // Add shadow to the navbar
+        backdropFilter: 'blur(10px)', // Optional: add a blur effect behind the navbar
+        zIndex: 1300, // Make sure the navbar stays on top of content
+        overflow: 'hidden', // Handle overflow if needed
+        paddingBottom: '10px', // Separate the navbar from the body
+        
+      
+      }}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -60,8 +70,8 @@ export default function Navbar() {
           >
             chefD
           </Typography>
-          
-          
+
+
           {/* Hamburger Menu for Mobile */}
           <IconButton
             color="inherit"
@@ -72,7 +82,7 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          
+
           {/* Regular Buttons for Desktop */}
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button

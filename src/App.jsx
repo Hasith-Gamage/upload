@@ -5,7 +5,7 @@ import Home from './pages/home.jsx';
 import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Resturant from './pages/resturant.jsx';
-import Menu from './pages/Menu.jsx';
+import Menu from './pages/menu.jsx';
 
 
 function App() {

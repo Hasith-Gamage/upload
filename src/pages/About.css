@@ -1,13 +1,8 @@
 .video-container {
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #14101077;
+ margin-top: 100px;
+ 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(5, 3, 3, 0.071);
-}
-
-.video-card {
-  padding: 20px;
 }
 
 .video-title {
@@ -39,7 +34,25 @@
   width: 110%; /* Ensure the image takes full width of the frame */
   border-radius: 10px; /* Rounded corners for the image */
   display: block; /* Ensures that there are no extra spaces below the image */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+/* Hover effect */
+.gallery-image:hover {
+  transform: scale(1.1); /* Enlarge the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
 
+/* Animation for all images */
+.animated-image {
+  animation: fadeIn 1s ease-in-out;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -23,7 +23,7 @@ L.Icon.Default.mergeOptions({
 
 export default function Contact() {
   return (
-    <div>
+    <div style={{marginTop: 100,}}>
       <h1 style={{ textAlign: 'center', color: '#ffb703' }}>Reservation</h1>
       <h4 style={{ textAlign: 'center', color: 'White' }}>
         ChefD offers easy table reservations for a seamless dining experience with friends and family.
@@ -51,8 +51,8 @@ export default function Contact() {
       {/* Add Map below the table reservation */}
       <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}>
         <MapContainer
-          center={[6.713024, 79.970703]} // Replace with your coordinates
-          zoom={13}
+          center={[6.543597634965682, 80.04001564152306]} // Replace with your coordinates
+          zoom={12}
           scrollWheelZoom={false}
           style={{ height: '300px', width: '80%' }}
         >
@@ -60,9 +60,14 @@ export default function Contact() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker position={[6.713024, 79.970703]}>
+          <Marker position={[6.543597634965682, 80.04001564152306]}>
             <Popup>
               ChefD is located here! <br /> No92, Dikhena Dodangoda.
+            </Popup>
+          </Marker>
+          <Marker position={[6.5712132611395795, 80.10219148751253]}>
+            <Popup>
+              ChefD is located here! Rannagala <br /> No92, Dikhena Dodangoda.
             </Popup>
           </Marker>
         </MapContainer>
